@@ -1,20 +1,10 @@
 ---
 import Codigos from "../components/svelte/codigos.svelte"
-const codigos = [
-    { name: 'JavaScript',  },
-    { name: 'TypeScript',  },
-    { name: 'Preact',  },
-    { name: 'Node.js',  },
-    { name: 'Python',  },
-    { name: 'Docker',  },
-    { name: 'AWS',  },
-    { name: 'GraphQL',  }
-];
 ---
 
-<section class="py-16">
-    <div class="max-w-4xl mx-auto px-4">
-        <div class="text-center mb-12">
+<section class="pt-20">
+
+        <div class="text-center mb-2">
             <h2 class="text-xl md:text-2xl xl:text-3xl text-complementary-primary font-bold mb-4">
              <slot name="titulocode"/>
             </h2>
@@ -22,12 +12,7 @@ const codigos = [
                 <slot name="descripcioncode"/>
             </p>
         </div>
-        
-        <div class="bg-background1-light dark:bg-background1-dark rounded-lg p-6 shadow-xl">
-            <h3 class="text-2xl font-semibold mb-6">
-                <slot name="lenguajes"/>
-            </h3>
-            <Codigos client:load codigos={codigos} />
-        </div>
-    </div>
+
+            <Codigos client:load/>
+
 </section>

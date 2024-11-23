@@ -4,7 +4,7 @@ import Main from "../../sections/main.astro";
 import Section1 from "../../sections/section1.astro";
 import Section2 from "../../sections/section2.astro";
 import Section3 from "../../sections/section3.astro";
-
+import Section4 from "../../sections/section4.astro";
 const data = {
   titulo: "Mis inspiraciones",
   subtitulo: "No lo digo yo, lo dice mi musica",
@@ -67,4 +67,23 @@ const cards = [
     <slot slot="descripcioncode">Con más de 5 años de experiencia en desarrollo de software, especializado en aplicaciones escalables y arquitecturas modernas.</slot>
     <slot slot="lenguajes">Mis Tecnologías</slot>
   </Section3>
+
+  <Section4 
+  name1="Nombre"
+  name2="Apellido"
+  mailto1="Correo Electrónico"
+  mailto2="email@ejemplo.com"
+  text1="Mensaje"
+  text2="Cuéntame sobre tu proyecto..."
+  clause="es"
+  submit1="Verificate..."
+  submit2="Enviar" 
+  alerta1="Por favor, complete la verificación de Turnstile"
+  alerta2="¡Formulario enviado con éxito!"
+  alerta3="Error al enviar el formulario"
+  alerta4="Error al conectar con el servidor"
+  >
+    <slot slot="formulario">Formulario</slot>
+    <slot slot="descripcionform">Enviame tu mensaje</slot>
+  </Section4>
 </Mainlayout>

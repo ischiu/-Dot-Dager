@@ -1,0 +1,35 @@
+---
+interface Props {
+    name1:string,
+    name2:string,
+    mailto1:string,
+    mailto2:string,
+    text1:string,
+    text2:string,
+    clause:string,
+    submit1:string,
+    submit2:string,
+    alerta1:string,
+    alerta2:string,
+    alerta3:string,
+    alerta4:string
+
+}
+
+const { name1, name2, mailto1, mailto2, text1, text2, clause, submit1, submit2, alerta1, alerta2, alerta3, alerta4 } = Astro.props;
+import Formulario from "../components/svelte/formulario.svelte"
+---
+
+<section class="pt-20">
+
+    <div class="text-center mb-2">
+        <h2 class="text-xl md:text-2xl xl:text-3xl text-complementary-primary font-bold mb-4">
+         <slot name="formulario"/>
+        </h2>
+        <p class="text-sm md:text-base xl:text-lg">
+        <slot name="descripcionform"/>
+        </p>
+    </div>
+
+    <Formulario {name1} {name2} {mailto1} {mailto2} {text1} {text2} {clause} {submit1} {submit2} {alerta1} {alerta2} {alerta3} {alerta4} client:load/>
+</section>

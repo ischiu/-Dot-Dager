@@ -4,6 +4,7 @@ import Main from "../../sections/main.astro";
 import Section1 from "../../sections/section1.astro";
 import Section2 from "../../sections/section2.astro";
 import Section3 from "../../sections/section3.astro";
+import Section4 from "../../sections/section4.astro";
 const data = {
   titulo: "My Inspirations",
   subtitulo: "I don't say it, my music does",
@@ -67,4 +68,22 @@ const cards = [
     <slot slot="descripcioncode">With over 5 years of experience in software development, I specialize in scalable and modern architectures.</slot>
     <slot slot="lenguajes">My Technologies</slot>
   </Section3>
+  <Section4
+  name1="Name"
+  name2="Lastname"
+  mailto1="Email"
+  mailto2="email@example.com"
+  text1="Message"
+  text2="Tell me about your project..."
+  clause="en"
+  submit1="Verify..."
+  submit2="Send"
+  alerta1="please complete the verification Turnstile"
+  alerta2="Form sent successfully!"
+  alerta3="Error sending the form"
+  alerta4="Error connecting to the server"
+  >
+    <slot slot="formulario">Form</slot>
+    <slot slot="descripcionform">Send me a message</slot>
+  </Section4>
 </Mainlayout>

@@ -24,7 +24,7 @@
     <div class="select-none card-back bg-background1-light dark:bg-background1-dark rounded-2xl shadow-lg hover:shadow-xl border border-complementary-secondary/30 overflow-hidden group">
       <div class="relative h-full">
         <img
-          src={imageUrl || "/pickle.png"}
+          src={imageUrl || "/img/pickle.png"}
           alt={title}
           class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
         />
