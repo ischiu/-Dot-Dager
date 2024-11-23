@@ -9,11 +9,13 @@ import preact from '@astrojs/preact';
 
 import cloudflare from '@astrojs/cloudflare';
 
+import netlify from '@astrojs/netlify';
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), svelte(), preact()],
   output: 'server',
-  adapter: cloudflare(),
+  adapter: netlify(),
   experimental: {
     env: {
       schema: {
