@@ -1,16 +1,22 @@
 ---
+export const prerender = false;
 
+type SupportedLanguage = 'es' | 'en';
+
+function getDefaultLanguage(acceptLanguageHeader: string | null): SupportedLanguage {
+    if (!acceptLanguageHeader) return 'es';
+    const preferredLanguages = acceptLanguageHeader
+        .split(',')
+        .map(lang => lang.split(';')[0].trim().toLowerCase());
+    for (const lang of preferredLanguages) {
+        if (lang.startsWith('es')) return 'es';
+        if (lang.startsWith('en')) return 'en';
+    }
+    return 'es';
+}
+
+const acceptLanguage = Astro.request.headers.get('accept-language');
+
+const defaultLanguage = getDefaultLanguage(acceptLanguage);
+return Astro.redirect(`/${defaultLanguage}`);
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>

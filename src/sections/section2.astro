@@ -1,0 +1,35 @@
+---
+import NavigationButtons from '../components/preact/botones.jsx';
+import ContentContainer from '../components/svelte/contenedor.svelte';
+---
+
+<section class="p-6">
+  <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-primary text-center">
+    <slot name="playlist"/>
+  </h2>
+  <h3 class="text-sm sm:text-base md:text-lg lg:text-xl text-center">
+    <slot name="playlist2"/>
+  </h3>
+
+  <NavigationButtons client:visible />
+
+  <ContentContainer client:visible>
+    <slot name="playlistitulo1" slot="playlistitulo1"/>
+    <slot name="playlistitulo2" slot="playlistitulo2"/>
+    <slot name="playlistext1" slot="playlistext1"/>
+    <slot name="playlistext2" slot="playlistext2"/>
+  </ContentContainer>
+</section>
+
+<p class="text-sm sm:text-base md:text-lg lg:text-xl text-center">
+  <slot name="playlist3"/>
+</p>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+</style>

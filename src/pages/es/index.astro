@@ -1,0 +1,70 @@
+---
+import Mainlayout from "../../layouts/mainlayout.astro";
+import Main from "../../sections/main.astro";
+import Section1 from "../../sections/section1.astro";
+import Section2 from "../../sections/section2.astro";
+import Section3 from "../../sections/section3.astro";
+
+const data = {
+  titulo: "Mis inspiraciones",
+  subtitulo: "No lo digo yo, lo dice mi musica",
+  categorias: [
+    "extraña",
+    "pepinillos",
+    "memes",
+    "improvisada",
+    "milei"
+  ]
+};
+
+const cards = [
+  {
+    emoji: "🎤",
+    title: "cantar",
+    description: "Canto porque la música me permite expresar lo que siento. Cada nota es una conexión con el alma de quienes me escuchan, un modo de compartir emociones y llevar mi corazón al escenario."
+  },
+  {
+    emoji: "🎼",
+    title: "componer",
+    description: "Componer es mi forma de plasmar mis pensamientos y sentimientos en melodías. Cada canción es una historia que comparto con los demás, un pedazo de mí en forma de música."
+  },
+  {
+    emoji: "🎶",
+    title: "tocar",
+    description: "Tocar es dar vida a la música que siento. Cada nota me conecta con el ritmo de la vida y me permite compartir la energía que la música trae al alma."
+  }
+];
+
+---
+
+<Mainlayout lang="es" titulo="Soy Dot Dager">
+  <Main>
+    <slot slot="saludo"> ¡Holis, soy </slot>
+    <slot slot="descripcion">
+      Desarrollador de software full-stack/senior líder con pasión por el código
+      SOLID y productos increíbles.
+    </slot>
+    <slot slot="github"> Ver Proyectos </slot>
+    <slot slot="email"> Contáctame </slot>
+  </Main>
+
+  <Section1 cards={cards} data={data}>
+    <slot slot="instrumentos"> Mi corazón es un frasco y la música, mis pepinillos</slot>
+    <slot slot="descripcion">"Lo hago por amor, no me debes nada."</slot>
+  </Section1>
+
+  <Section2>
+    <slot slot="playlist">Encurtido en la creación de contenido</slot>
+    <slot slot="playlist2">Cuento con más de 2 años de experiencia creando contenido, logrando construir una comunidad sólida y en constante crecimiento</slot>
+    <slot slot="playlist3">Proximamente pagina <span class="text-primary">azul</span></slot>
+    <slot slot="playlistitulo1">Mi Canal de YouTube</slot>
+    <slot slot="playlistitulo2">Mi Canal de Spotify</slot>
+    <slot slot="playlistext1">Mira mi increible contendio de Desarrollador señior de software full stack</slot>
+    <slot slot="playlistext2">Escucha mis canciones hecha con creatividad, amor y pasión</slot>
+  </Section2>
+  <Section3 >
+    <slot slot="titulocode">por algo soy un Senior</slot>
+    <slot slot="descripcioncode">Con más de 5 años de experiencia en desarrollo de software, especializado en aplicaciones escalables y arquitecturas modernas.</slot>
+    <slot slot="lenguajes">Mis Tecnologías</slot>
+  </Section3>
+</Mainlayout>

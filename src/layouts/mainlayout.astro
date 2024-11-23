@@ -1,0 +1,24 @@
+---
+import Nav from "../components/nav.astro";
+import Nieve from "../components/preact/nieve.jsx";
+const { titulo, lang } = Astro.props;
+---
+
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{titulo}</title>
+  </head>
+  <body
+    class="bg-background2-light dark:bg-background2-dark text-txt-light dark:text-txt-dark min-w-[315px]"
+  >
+    <Nieve client:load />
+    <Nav />
+
+    <slot />
+  </body>
+</html>
+<style>

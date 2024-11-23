@@ -1,0 +1,49 @@
+---
+import Card from '../components/svelte/card.svelte';
+
+interface Props {
+  data: {
+    titulo: string;
+    subtitulo: string;
+    categorias: string[];
+  },
+  cards: {
+    emoji: string;
+    title: string;
+    description: string;
+    imageUrl?: string;
+  }[];
+}
+
+const { data , cards } = Astro.props;
+---
+
+<section class="px-2 my-8 md:my-14 xl:my-24">
+  <h2 class="text-xl sm:text-2xl md:text-3xl xl:text-4xl font-serif text-primary text-center mb-6 italic">
+    <slot name="instrumentos"/>
+  </h2>
+
+
+  <p class="my-8 text-complementary-secondary text-center text-lg mb-12 font-serif italic">
+    <slot name="descripcion"/>
+  </p>
+
+  <div class="my-8 flex flex-wrap justify-center gap-6">
+      {cards.map((card) => (
+         <Card emo={card.emoji} title={card.title} description={card.description} imageUrl={card.imageUrl} client:visible />
+      ))}
+  </div>
+
+  
+  <article class="my-4 text-center">
+    <div class="bg-background1-light dark:bg-background1-dark p-8 rounded-2xl shadow-md mx-2 sm:mx-4 md:mx-6 xl:mx-12 border border-complementary-secondary">
+      <h3>{data.titulo}</h3>
+      <h4 class="text-2xl font-serif mb-4 text-complementary-primary">{data.subtitulo}</h4>
+      <div class="flex flex-wrap justify-center gap-3 select-none">
+        {data.categorias.map(categoria => (
+          <span class="px-4 py-2 bg-secondary font-extrabold rounded-full text-white text-sm">{categoria}</span>
+        ))}
+      </div>
+    </div>
+  </article>
+</section>

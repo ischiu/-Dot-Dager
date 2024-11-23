@@ -1,0 +1,12 @@
+---
+const ruta = Astro.url.pathname;
+let neoruta = ruta === "/en" ? "/es" : "/en";
+let texto = ruta === "/en" ? "ES" : "EN";
+---
+
+<a
+  href={neoruta}
+  class="p-0.5 border border-gray-400 dark:border-gray-200 rounded-md transition-colors duration-200 flex items-center"
+>
+  <span>🌐 {texto}</span>
+</a>

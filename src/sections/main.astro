@@ -1,0 +1,31 @@
+<main class="px-2 my-4 sm:my-8 md:my-14 xl:my-24 flex items-center justify-center">
+    <div class="mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center lg:items-start gap-10">
+
+      <div class="flex-shrink-0 select-none pointer-events-none">
+        <img src="/pickle.png" alt="Foto de Perfil" 
+             class="w-40 h-40 lg:w-56 lg:h-56 rounded-full border-4 border-primary shadow-lg">
+      </div>
+  
+      <article class="text-center lg:text-left">
+        
+        <h1 class="text-4xl lg:text-5xl font-bold">
+          <slot name="saludo"/><span class="text-primary"> Dagger!</span>
+        </h1>
+        <p class="mt-4 text-lg lg:text-xl">
+          <slot name="descripcion"/>
+        </p>
+        
+        <aside class="select-none mt-6 flex flex-col lg:flex-row gap-4">
+          <a href="https://github.com/MarianoVilla" 
+             class="mx-auto lg:mx-0 px-6 py-3 bg-complementary-primary text-white text-lg font-semibold rounded-md shadow hover:bg-complementary-primary/90 transition">
+            <slot name="github"/>
+          </a>
+          <a href="mailto:DotDager@Gmail.com" 
+             class=" mx-auto lg:mx-0 px-6 py-3 bg-secondary text-white text-lg font-semibold rounded-md shadow hover:bg-secondary/90 transition">
+            <slot name="email"/>
+          </a>
+        </aside>
+      </article>
+
+    </div>
+  </main>
