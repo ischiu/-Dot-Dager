@@ -2,22 +2,22 @@
     import { onMount, onDestroy } from 'svelte';
     
     const technologies = [
-      { titulo: "Ruby", imagen: "/img/pickle.png" },
-      { titulo: "C#", imagen: "/img/pickle.png" },
-      { titulo: "JavaScript", imagen: "/img/pickle.png" },
-      { titulo: "HTML", imagen: "/img/pickle.png" },
-      { titulo: "ShaderLab", imagen: "/img/pickle.png" },
-      { titulo: "TypeScript", imagen: "/img/pickle.png" },
-      { titulo: "Visual Basic .NET", imagen: "/img/pickle.png" },
-      { titulo: "Jupyter Notebook", imagen: "/img/pickle.png" },
-      { titulo: "Ruby", imagen: "/img/pickle.png" },
-      { titulo: "C#", imagen: "/img/pickle.png" },
-      { titulo: "JavaScript", imagen: "/img/pickle.png" },
-      { titulo: "HTML", imagen: "/img/pickle.png" },
-      { titulo: "ShaderLab", imagen: "/img/pickle.png" },
-      { titulo: "TypeScript", imagen: "/img/pickle.png" },
-      { titulo: "Visual Basic .NET", imagen: "/img/pickle.png" },
-      { titulo: "Jupyter Notebook", imagen: "/img/pickle.png" }
+      { titulo: "Ruby", imagen: "/img/ruby.png" },
+      { titulo: "C#", imagen: "/img/c-sharp.png" },
+      { titulo: "JavaScript", imagen: "/img/javascript.png" },
+      { titulo: "HTML", imagen: "/img/html.png" },
+      { titulo: "ShaderLab", imagen: "/img/unity.png" },
+      { titulo: "TypeScript", imagen: "/img/typescript.png" },
+      { titulo: "Visual Basic .NET", imagen: "/img/visual-basic.png" },
+      { titulo: "Jupyter Notebook", imagen: "/img/Jupyter.png" },
+      { titulo: "Ruby", imagen: "/img/ruby.png" },
+      { titulo: "C#", imagen: "/img/c-sharp.png" },
+      { titulo: "JavaScript", imagen: "/img/javascript.png" },
+      { titulo: "HTML", imagen: "/img/html.png" },
+      { titulo: "ShaderLab", imagen: "/img/unity.png" },
+      { titulo: "TypeScript", imagen: "/img/typescript.png" },
+      { titulo: "Visual Basic .NET", imagen: "/img/visual-basic.png" },
+      { titulo: "Jupyter Notebook", imagen: "/img/Jupyter.png" }
     ];
     
     let rowContainer;
@@ -33,9 +33,9 @@
     
     function createTechElement(tech) {
       const figure = document.createElement('figure');
-      figure.className = ' flex-none cursor-pointer overflow-hidden rounded-xl border border-primary dark:border-complementary-primary mt-4 mr-4 ease-in-out hover:-translate-y-0.5';
+      figure.className = ' flex-none cursor-pointer overflow-hidden drop-shadow-2xl rounded-xl mt-4 mr-4 ease-in-out hover:-translate-y-0.5';
       figure.innerHTML = `
-        <img src="${tech.imagen}" alt="${tech.titulo}" class="w-full h-40 object-cover rounded-lg">
+        <img src="${tech.imagen}" alt="${tech.titulo}" class="w-full h-40 px-4 object-cover rounded-lg">
       `;
       
       figure.addEventListener('mouseenter', () => {
