@@ -35,7 +35,7 @@
       const figure = document.createElement('figure');
       figure.className = ' flex-none cursor-pointer overflow-hidden drop-shadow-2xl rounded-xl mt-4 mr-4 ease-in-out hover:-translate-y-0.5';
       figure.innerHTML = `
-        <img src="${tech.imagen}" alt="${tech.titulo}" class="w-full h-40 px-4 object-cover rounded-lg">
+        <img src="${tech.imagen}" alt="${tech.titulo}" class="w-full h-40 px-4 pointer-events-none object-cover rounded-lg">
       `;
       
       figure.addEventListener('mouseenter', () => {

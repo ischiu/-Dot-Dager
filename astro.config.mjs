@@ -7,8 +7,6 @@ import svelte from '@astrojs/svelte';
 
 import preact from '@astrojs/preact';
 
-import cloudflare from '@astrojs/cloudflare';
-
 import netlify from '@astrojs/netlify';
 
 // https://astro.build/config

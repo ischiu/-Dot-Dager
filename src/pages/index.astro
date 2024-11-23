@@ -42,9 +42,7 @@ const cards = [
 ---
 
 <Mainlayout lang="es" titulo="Soy Dot Dager">
-  <p>main1</p>
   <Main>
-    <p>main2</p>
     <slot slot="saludo"> ¡Holis, soy </slot>
     <slot slot="descripcion">
       Desarrollador de software full-stack/senior líder con pasión por el código
@@ -53,15 +51,11 @@ const cards = [
     <slot slot="github"> Ver Proyectos </slot>
     <slot slot="email"> Contáctame </slot>
   </Main>
-  <p>seccion1e</p>
   <Section1 cards={cards} data={data}>
-    <p>seccion1s</p>
     <slot slot="instrumentos"> Mi corazón es un frasco y la música, mis pepinillos</slot>
     <slot slot="descripcion">"Lo hago por amor, no me debes nada."</slot>
   </Section1>
-  <p>seccion2e</p>
   <Section2>
-    <p>seccion2s</p>
     <slot slot="playlist">Encurtido en la creación de contenido</slot>
     <slot slot="playlist2">Cuento con más de 2 años de experiencia creando contenido, logrando construir una comunidad sólida y en constante crecimiento</slot>
     <slot slot="playlist3">Proximamente pagina <span class="text-primary">azul</span></slot>
@@ -70,15 +64,11 @@ const cards = [
     <slot slot="playlistext1">Mira mi increible contendio de Desarrollador señior de software full stack</slot>
     <slot slot="playlistext2">Escucha mis canciones hecha con creatividad, amor y pasión</slot>
   </Section2>
-  <p>seccion3e</p>
   <Section3 >
-    <p>seccion3s</p>
     <slot slot="titulocode">por algo soy un Senior</slot>
     <slot slot="descripcioncode">Con más de 5 años de experiencia en desarrollo de software, especializado en aplicaciones escalables y arquitecturas modernas.</slot>
     <slot slot="lenguajes">Mis Tecnologías</slot>
   </Section3>
-
-  <p>seccion4e</p>
   <Section4 
   name1="Nombre"
   name2="Apellido"
@@ -94,7 +84,6 @@ const cards = [
   alerta3="Error al enviar el formulario"
   alerta4="Error al conectar con el servidor"
   >
-    <p>seccion4s</p>
     <slot slot="formulario">Formulario</slot>
     <slot slot="descripcionform">Enviame tu mensaje</slot>
   </Section4>
