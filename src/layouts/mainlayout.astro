@@ -2,6 +2,7 @@
 import Nav from "../components/nav.astro";
 import Nieve from "../components/preact/nieve.jsx";
 import Footer from "../components/footer.astro";
+import { ViewTransitions } from "astro:transitions";
 const { titulo, lang } = Astro.props;
 ---
 
@@ -12,8 +13,10 @@ const { titulo, lang } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{titulo}</title>
+    <ViewTransitions />
   </head>
   <body
+   transition:animate="fade"
     class="bg-background2-light dark:bg-background2-dark text-txt-light dark:text-txt-dark min-w-[315px]"
   >
     <Nieve client:load />
