@@ -15,7 +15,7 @@ import netlify from '@astrojs/netlify';
 export default defineConfig({
   integrations: [tailwind(), svelte(), preact()],
   output: 'server',
-  adapter: cloudflare(),
+  adapter: netlify(),
   experimental: {
     env: {
       schema: {
