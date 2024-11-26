@@ -16,10 +16,8 @@ export default function ProfileSwitch() {
     };
   }, []);
 
-  // Efecto para manejar la animación
   useEffect(() => {
     if (!isVisible) {
-      // Pequeño retraso para asegurar que la transición se active
       setTimeout(() => {
         setShouldAnimate(true);
       }, 50);
